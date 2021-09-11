@@ -35,7 +35,7 @@ def scrape():
             proxies.append(proxy)
     for p in proxies:
         scraped = scraped + 1 
-        f.write((p)+"\n")
+        f.write("http://"+(p)+"\n")
     f.close()
     print(f"{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Scraped {Fore.WHITE}{scraped} {Fore.LIGHTBLACK_EX}proxies.")
 
@@ -110,7 +110,7 @@ else:
         else:
             proxi = random.choice(rproxy)
         proxies = {
-            "https": proxi
+            "http": proxi
         }
         amount = amount - 1
         if "boost" in nitro:
